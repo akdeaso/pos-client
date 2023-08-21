@@ -130,7 +130,11 @@ export default function Checkout() {
       <TopBar />
       <Text as="h3">Checkout</Text>
       <br />
-      <Steps steps={steps} />
+      <Steps
+        steps={steps}
+        active={activeStep}
+        onChange={(step) => setActiveStep(step)}
+      />
 
       {activeStep === 0 && (
         <div>
@@ -171,6 +175,7 @@ export default function Checkout() {
 
       {activeStep === 1 && (
         <div>
+          <br /> <br />
           <Table
             items={data}
             columns={addressColumns}
@@ -219,6 +224,7 @@ export default function Checkout() {
       )}
       {activeStep === 2 && (
         <div>
+          <br /> <br />
           <Table
             columns={[
               {

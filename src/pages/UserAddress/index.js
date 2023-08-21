@@ -23,7 +23,6 @@ const columns = [
 
 export default function UserAddress() {
   const { count, data, limit, page, setPage, status } = useAddressData();
-  console.log("ini data", data);
 
   return (
     <LayoutOne size="large">

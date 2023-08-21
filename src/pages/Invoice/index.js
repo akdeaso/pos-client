@@ -21,7 +21,6 @@ export default function Invoice() {
         if (data.error) {
           setError(data.message);
         }
-        console.log("invoice data", data);
         setInvoice(data);
       })
       .catch((err) => setError(err.message))
